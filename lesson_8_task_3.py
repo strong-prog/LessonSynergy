@@ -19,6 +19,8 @@ count_boat = 0
 for n in range(count_people):  # добавляем вес рыбаков в массив
     weight_people.append(int(input(f'Введите вес {n + 1} рыбака: ')))
 
+weight_people.sort(reverse=True)
+
 while len(weight_people) > 0:
     if len(weight_people) == 1:  # если рыбак один, отправляем
         del weight_people[0]
