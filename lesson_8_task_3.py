@@ -19,17 +19,16 @@ count_boat = 0
 for n in range(count_people):  # добавляем вес рыбаков в массив
     weight_people.append(int(input(f'Введите вес {n + 1} рыбака: ')))
 
-weight_people.sort(reverse=True)
-
 while len(weight_people) > 0:
     if len(weight_people) == 1:  # если рыбак один, отправляем
-        del weight_people[0]
+        weight_people.clear()
         count_boat += 1
-    elif sum(weight_people[:2]) <= max_weight:  # проверяем вес двоих рыбаков на отправку
-        del weight_people[:2]
+    elif max(weight_people) + min(weight_people) <= max_weight:  # проверяем вес двоих рыбаков на отправку
+        weight_people.remove(max(weight_people))
+        weight_people.remove(min(weight_people))
         count_boat += 1
     else:
-        del weight_people[0]  # иначе отправляем одного
+        weight_people.remove(max(weight_people))  # иначе отправляем большего по весу
         count_boat += 1
 
 print(f'Необходимое количество лодок: {count_boat}')
