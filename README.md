@@ -8,3 +8,13 @@
 - Урок №8. Списки.
 - Урок №9. Множества.
 - Урок №10. Словари.
+- Урок №11. Функции.
+
+# Инструкция по запуску на Linux/Ubuntu
+
+```
+mkdir ~/lesson_project
+cd ~/lesson_project
+git clone https://gitlab.com/strong.tretyakov/LessonSynergy
+pip install -r requirements.txt
+```
