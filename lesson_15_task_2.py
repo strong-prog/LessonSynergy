@@ -27,12 +27,8 @@ class Transport:
 
 
 class Autobus(Transport):
-    def __init__(self, name, max_speed, mileage):
-        super().__init__(name, max_speed, mileage)
-        self.capacity = 50
-
     def seating_capacity(self, *args):
-        return f"Вместимость одного автобуса {self.name} {self.capacity} пассажиров"
+        return super().seating_capacity(capacity=50)
 
 
 bus = Autobus('Renault Logan', 180, 12)
