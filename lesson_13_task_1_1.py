@@ -20,8 +20,6 @@ def create_matrix(n1, n2):
 
 def sum_matrix(m1, m2):
     # сложение матриц.
-    # summ = [[(x + y) for x, y in zip(row1, row2)] for row1, row2 in zip(m1, m2)]
-
     summ = []
     for row1, row2 in zip(m1, m2):
         sum_row = []
@@ -41,6 +39,5 @@ print('Матрица 1:', matrix1, sep='\n')
 matrix2 = create_matrix(x, y)
 print('Матрица 2:', matrix2, sep='\n')
 
-# сложение матриц.
 matrix3 = sum_matrix(matrix1, matrix2)
 print('Сложение матриц:', matrix3, sep='\n')
